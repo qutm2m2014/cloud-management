@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Positions</title>
+	<script>
+	</script>
+</head>
+<body>
+	<ul>
+		{% for p in positions %}
+			<li>{{ p.name }} is at Lat: {{ p.lat }} and Long: {{ p.lng }}</li>
+		{% endfor %}
+	</ul>
+</body>
+</html>
