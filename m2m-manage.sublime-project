@@ -1,0 +1,12 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "."
+		}
+	],
+	"settings": {
+        "python_interpreter": "/Users/mnbbrown/.virtualenvs/m2m-manager/bin/python"
+    }
+}

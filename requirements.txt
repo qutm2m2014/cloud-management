@@ -9,7 +9,4 @@ mercurial==3.0
 pep8==1.4.6
 psycopg2==2.5.2
 stevedore==0.14.1
-virtualenv==1.11.4
-virtualenv-clone==0.2.4
-virtualenvwrapper==4.2
 wsgiref==0.1.2
