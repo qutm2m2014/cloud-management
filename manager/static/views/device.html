@@ -1,0 +1,50 @@
+<header>
+    <h3>
+        <span>Device Type</span>:
+        <span ng-bind="device.serial_number"></span>
+    </h3>
+</header>
+<dl class="dl-horizontal" id="deviceMetadata">
+    <dt>
+        <abbr title="attribute">Device Type</abbr>
+    </dt>
+    <!-- <dd ng-bind="device.deviceType.id"></dd> -->
+    <dd>Hello</dd>
+    <dt>
+        <abbr title="attribute">Activation Secret</abbr>
+    </dt>
+    <!-- <dd ng-bind="device.deviceType.activation_secret"></dd> -->
+    <dd>Boo</dd>
+    <dt>
+        <abbr title="attribute">Added</abbr>
+    </dt>
+    <dd ng-bind="device.dt_created | amCalendar"></dd>
+    <dt>
+        <abbr title="attribute">Tags</abbr>
+    </dt>
+    <!-- <dd>
+        <span ng-repeat="tag in device.tags" class="tag" ng-bind="tag+' '"></span>
+    </dd> -->
+    <dd>Hoo</dd>
+</dl>
+<!-- <div class="container"> -->
+    <div id="column1">
+        <h4>Input Streams</h4>
+        <ul>
+            <li ng-repeat="stream in device.streams">
+                <span ng-bind="stream.name"></span>
+            </li>
+        </ul>
+        <button class="btn btn-success btn-block">New Input Stream</button>
+        <hr>
+        <h4>Output Streams</h4>
+        <hr>
+        <button class="btn btn-success btn-block">New Output Stream</button>
+    </div>
+
+    <div id="column2">
+        <h4>Triggers</h4>
+        <button class="btn btn-success btn-block">New Trigger</button>
+        <hr>
+    </div>
+<!-- </div> -->

@@ -1,0 +1,19 @@
+<div class="center-shift">
+    <header>
+        <h3>Add A New Device Type</h3>
+    </header>
+
+    <form action="" role="form">
+        <div class="form-group">
+            <label for="newDeviceName">Name</label>
+            <input ng-model="device.name" type="text" class="form-control" id="newDeviceName" placeholder="e.g. My Device Type">
+        </div>
+
+        <div class="form-group">
+            <label for="newDeviceDescription">Description</label>
+            <textarea ng-model="device.description" class="form-control" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" ng-click="submit()">Submit</button>
+        <button type="submit" class="btn btn-link" ng-click="back()">Back to Device Types</button>
+    </form>
+</div>

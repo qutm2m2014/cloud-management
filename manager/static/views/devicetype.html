@@ -1,0 +1,49 @@
+<header class="clearfix">
+    <h3 ng-bind="deviceType.name" class="pull-left"></h3>
+    <a class="btn btn-primary pull-right" ng-href="/{{deviceType.id}}/newdevices">
+     <span class="glyphicon glyphicon-plus"></span>&nbsp;Add New Devices</a>
+</header>
+<dl class="dl-horizontal" id="deviceTypeMetadata">
+    <dt>
+        <abbr title="attribute">Product ID</abbr>
+    </dt>
+    <dd ng-bind="deviceType.id"></dd>
+    <dt>
+        <abbr title="attribute">Activation Secret</abbr>
+    </dt>
+    <dd ng-bind="deviceType.activation_secret"></dd>
+    <dt>
+        <abbr title="attribute">Added</abbr>
+    </dt>
+    <dd ng-bind="deviceType.dt_created | amCalendar"></dd>
+    <dt>
+        <abbr title="attribute">Tags</abbr>
+    </dt>
+    <dd>
+        <span ng-repeat="tag in deviceType.tags" class="tag" ng-bind="tag+' '"></span>
+    </dd>
+</dl>
+<div id="tableMetadata">
+    <form class="form-inline">
+        <input class="form-control" type="text" ng-model="search" placeholder="Search by serial number">
+        <span>Showing <b>{{(devices | filter:search).length}}</b> of <b>{{devices.length}}</b></span>
+    </form>
+</div>
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>Serial Number</th>
+            <th>Activated</th>
+            <th style="width: 150px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="device in devices | filter:search">
+            <td ng-bind="device.serial_number"></td>
+            <td ng-bind="device.activated"></td>
+            <td><a href="" class="btn btn-primary btn-xs" ng-href="/{{deviceType.id}}/devices/{{device.serial_number}}" >Manage</a>&nbsp;
+                <button class="btn btn-danger btn-xs" ng-click="deleteDevice(device)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

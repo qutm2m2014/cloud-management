@@ -1,0 +1,63 @@
+@charset'UTF-8';
+ @import"bourbon/dist/bourbon";
+ @import"neat/app/assets/stylesheets/neat";
+ // @import"foundation/functions";
+ // @import"foundation/components/type";
+ // @import"foundation/components/tables";
+ // @import"foundation/components/forms";
+ // @import"foundation/components/buttons";
+
+// body
+// {
+//     font-family: 'Open Sans', Arial;
+//     font-size: 14px;
+// }
+
+ header {
+    margin: 3em 0;
+    .btn {
+        margin-top: 15px;
+    }
+}
+.container {
+    @include outer-container;
+}
+textarea {
+    resize: none;
+    overflow: scroll;
+}
+footer {
+}
+dd ul {
+    margin: 0;
+    padding: 0;
+}
+#deviceTypeMetadata dd {
+    // color: lighten(#000, 60%);
+}
+#tableMetadata input {
+    width: 300px;
+}
+#column1 {
+    @include span-columns(6);
+}
+#column2 {
+    @include span-columns(6);
+}
+.center-shift {
+    @include span-columns(8);
+    @include shift(2);
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/MTP_ySUJH_bn48VBG8sNSqRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}

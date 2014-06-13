@@ -1,0 +1,26 @@
+<header>
+    <h3 ng-bind="pageTitle" class="pull-left"></h3>
+    <a class="btn btn-primary pull-right" ng-href="/newdevicetype">Add Device Type</a>
+</header>
+<!-- <input type="text" ng-model="table.search.name" placeholder="Search by name" class="form-control"> -->
+<table id="deviceTypesTable" class="table table-responsive">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Registered Devices</th>
+            <th>% Activated</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="type in types | filter:table.search">
+            <td ng-bind="type.name"></td>
+            <td ng-bind="type.devices.count"></td>
+            <td ng-bind="type.devices.percentage_activated"></td>
+            <td>
+                <a class="btn btn-xs btn-primary" ng-href="/{{type.id}}">Devices</a>
+                <button class="btn btn-xs btn-danger" ng-click="delete(type)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

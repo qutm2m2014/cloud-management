@@ -1,0 +1,26 @@
+{
+  "name": "m2m-manager",
+  "version": "0.0.1",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git:/github.com/qutm2m2014/m2m-manager"
+  },
+  "author": "Matthew Brown",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.7.0",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-cache": "^0.1.11",
+    "gulp-concat": "^2.2.0",
+    "gulp-duration": "0.0.0",
+    "gulp-livereload": "^2.0.0",
+    "gulp-minify-css": "^0.3.4",
+    "gulp-minify-html": "^0.1.3",
+    "gulp-rev": "^0.4.1",
+    "gulp-ruby-sass": "^0.5.0",
+    "gulp-sass": "^0.7.2",
+    "gulp-uncss": "^0.4.4",
+    "gulp-usemin": "^0.3.5"
+  }
+}
